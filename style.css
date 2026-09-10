@@ -1,3 +1,7 @@
+/* =====================
+   estilos generales
+   ===================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,72 +16,173 @@ body {
 }
 
 
-/* ENCABEZADO */
+/* ===============================
+   encabezado de las hojas de vida
+   =============================== */
+
+.perfil-header {
+    background-color: #1f3c88;
+    color: white;
+    text-align: center;
+}
+
+.perfil-header p {
+    margin-top: 10px;
+}
+
+
+/* =================
+   FOTO DE PERFIL
+   ================= */
+
+.foto-perfil {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 4px solid #ffffff;
+}
+
+.foto-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ===============================
+   contenedor de la hoja de vida
+   =============================== */
+
+.cv-container {
+    max-width: 960px;
+}
+
+
+/* =============================
+   secciones de la hoja de vida
+   ============================= */
+
+.cv-seccion {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cv-seccion:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Títulos de las secciones */
+
+.cv-seccion h2 {
+    color: #1f3c88;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    font-weight: bold;
+}
+
+
+/* Subtítulos */
+
+.cv-seccion h3 {
+    color: #333;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+
+/* Textos */
+
+.cv-seccion p,
+.cv-seccion span {
+    color: #555;
+}
+
+
+/* =============================
+  informacion y experiencia
+   ============================*/
+
+.informacion p {
+    margin-bottom: 0.75rem;
+}
+
+.experiencia,
+.estudio,
+.referencia {
+    margin-bottom: 1rem;
+}
+
+.experiencia:last-child,
+.estudio:last-child,
+.referencia:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ===========================
+   pagina principal
+   =========================== */
 
 .encabezado {
     background-color: #1f3c88;
     color: white;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.encabezado h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
 }
 
 .encabezado p {
-    font-size: 18px;
+    margin-top: 10px;
 }
 
 
-/* CONTENEDOR */
-
-.contenedor {
-    width: 90%;
-    max-width: 900px;
-
-    margin: 50px auto;
-
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-
-/* TARJETAS */
+/* ==============================
+   tarjetas 
+   ============================== */
 
 .tarjeta {
     background-color: white;
-
-    width: 350px;
-    min-height: 350px;
 
     padding: 35px 25px;
 
     border-radius: 15px;
 
     text-align: center;
-
     text-decoration: none;
+
     color: #333;
 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
 
-    transition: 0.3s;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    height: 100%;
 }
 
 
-/* EFECTO DEL MOUSE */
+/* Efecto para cuando pase el mouse */
 
 .tarjeta:hover {
     transform: translateY(-8px);
 
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.20);
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.20);
 }
 
 
-/* ICONO */
+/* =============================
+   FOTOS DE LAS TARJETAS
+   =============================*/
 
 .icono {
     width: 120px;
@@ -86,7 +191,6 @@ body {
     margin: 0 auto 20px;
 
     border-radius: 50%;
-
     overflow: hidden;
 
     background-color: #1f3c88;
@@ -108,7 +212,9 @@ body {
 }
 
 
-/* NOMBRE */
+/* =============================
+   nombres
+   ============================ */
 
 .tarjeta h2 {
     font-size: 24px;
@@ -116,95 +222,79 @@ body {
     color: #1f3c88;
 
     margin-bottom: 15px;
-}
-
-
-/* TEXTO */
-
-.tarjeta p {
-    color: #666;
-
-    margin-bottom: 25px;
-}
-
-
-/* BOTÓN */
-
-.boton {
-    display: inline-block;
-
-    background-color: #1f3c88;
-
-    color: white;
-
-    padding: 12px 25px;
-
-    border-radius: 8px;
 
     font-weight: bold;
 }
 
 
-/* PIE DE PÁGINA */
+/* =============================
+   tarjetas
+   ============================= */
+
+.tarjeta p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+
+/* =============================
+   boton perzonalizado
+   ============================= */
+
+.boton {
+    font-weight: bold;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+}
+
+
+/* =============================
+   volver
+   =============================*/
+
+.boton-volver {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* ============================
+   pie de pagina
+   ============================*/
 
 footer {
     background-color: #1f3c88;
-
     color: white;
-
-    text-align: center;
-
-    padding: 20px;
 
     margin-top: 60px;
 }
 
+footer p {
+    margin-bottom: 0;
+}
 
-/* CELULARES */
+
+/* ============================
+   diseño para celular
+   ============================ */
 
 @media (max-width: 700px) {
-
-    .contenedor {
-        flex-direction: column;
-
-        align-items: center;
-    }
-
-    .tarjeta {
-        width: 90%;
-        max-width: 350px;
-    }
 
     .encabezado h1 {
         font-size: 32px;
     }
-}
-/* FOTO DE PERFIL */
 
-.foto-perfil {
-    width: 130px;
-    height: 130px;
+    .tarjeta {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
 
-    margin: 0 auto 20px;
+    .foto-perfil {
+        width: 115px;
+        height: 115px;
+    }
 
-    border-radius: 50%;
-
-    overflow: hidden;
-
-    background-color: white;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border: 4px solid #ffffff;
-}
-
-.foto-perfil img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
 }
