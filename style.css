@@ -1,6 +1,4 @@
-/* =====================
-   estilos generales
-   ===================== */
+/* estos son los estilos generales */
 
 * {
     margin: 0;
@@ -16,9 +14,7 @@ body {
 }
 
 
-/* ===============================
-   encabezado de las hojas de vida
-   =============================== */
+/* este es el encabezado de las hojas de vida */
 
 .perfil-header {
     background-color: #1f3c88;
@@ -31,9 +27,7 @@ body {
 }
 
 
-/* =================
-   FOTO DE PERFIL
-   ================= */
+/* esta es la foto de pertfil */
 
 .foto-perfil {
     width: 130px;
@@ -60,18 +54,14 @@ body {
 }
 
 
-/* ===============================
-   contenedor de la hoja de vida
-   =============================== */
+/* el contenedor de las hojas de vida */
 
 .cv-container {
     max-width: 960px;
 }
 
 
-/* =============================
-   secciones de la hoja de vida
-   ============================= */
+/* seleccionador de las hojas de vida */
 
 .cv-seccion {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -109,9 +99,7 @@ body {
 }
 
 
-/* =============================
-  informacion y experiencia
-   ============================*/
+/* informacion y experiencia*/
 
 .informacion p {
     margin-bottom: 0.75rem;
@@ -130,9 +118,7 @@ body {
 }
 
 
-/* ===========================
-   pagina principal
-   =========================== */
+/*  pagina principal*/
 
 .encabezado {
     background-color: #1f3c88;
@@ -144,9 +130,7 @@ body {
 }
 
 
-/* ==============================
-   tarjetas 
-   ============================== */
+/* tarjetas */
 
 .tarjeta {
     background-color: white;
@@ -180,9 +164,7 @@ body {
 }
 
 
-/* =============================
-   FOTOS DE LAS TARJETAS
-   =============================*/
+/* fotos para las tarjetas*/
 
 .icono {
     width: 120px;
@@ -212,9 +194,7 @@ body {
 }
 
 
-/* =============================
-   nombres
-   ============================ */
+/*nombres */
 
 .tarjeta h2 {
     font-size: 24px;
@@ -227,9 +207,7 @@ body {
 }
 
 
-/* =============================
-   tarjetas
-   ============================= */
+/*tarjetas */
 
 .tarjeta p {
     color: #666;
@@ -237,9 +215,7 @@ body {
 }
 
 
-/* =============================
-   boton perzonalizado
-   ============================= */
+/* boton perzonalizado*/
 
 .boton {
     font-weight: bold;
@@ -250,9 +226,7 @@ body {
 }
 
 
-/* =============================
-   volver
-   =============================*/
+/* volver*/
 
 .boton-volver {
     text-decoration: none;
@@ -260,9 +234,7 @@ body {
 }
 
 
-/* ============================
-   pie de pagina
-   ============================*/
+/*pie de pagina*/
 
 footer {
     background-color: #1f3c88;
@@ -276,9 +248,7 @@ footer p {
 }
 
 
-/* ============================
-   diseño para celular
-   ============================ */
+/*diseño para celular*/
 
 @media (max-width: 700px) {
 
