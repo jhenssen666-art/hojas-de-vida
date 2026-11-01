@@ -1,15 +1,14 @@
+
 const express = require("express");
 const Experiencia = require("../models/experiencia");
 
 const router = express.Router();
 
-// con esto obtenemos todas las experiencias
+// GET: Obtener todas las experiencias
 router.get("/", async (req, res) => {
     try {
         const experiencias = await Experiencia.find();
-
         res.json(experiencias);
-
     } catch (error) {
         res.status(500).json({
             mensaje: "Error al obtener las experiencias",
@@ -18,7 +17,7 @@ router.get("/", async (req, res) => {
     }
 });
 
-// esto se usa para obtener una experiencia por ID
+// GET: Obtener una experiencia por ID
 router.get("/:id", async (req, res) => {
     try {
         const experiencia = await Experiencia.findById(req.params.id);
@@ -30,24 +29,21 @@ router.get("/:id", async (req, res) => {
         }
 
         res.json(experiencia);
-
     } catch (error) {
         res.status(400).json({
-            mensaje: "ID de experiencia no válido",
+            mensaje: "Error al buscar la experiencia",
             error: error.message
         });
     }
 });
 
-// con esto creamos una nueva experiencia
+// POST: Crear una experiencia
 router.post("/", async (req, res) => {
     try {
         const nuevaExperiencia = new Experiencia(req.body);
-
         const experienciaGuardada = await nuevaExperiencia.save();
 
         res.status(201).json(experienciaGuardada);
-
     } catch (error) {
         res.status(400).json({
             mensaje: "Error al crear la experiencia",
@@ -56,16 +52,13 @@ router.post("/", async (req, res) => {
     }
 });
 
-//se usa para actualizar una experiencia
+// PUT: Actualizar una experiencia
 router.put("/:id", async (req, res) => {
     try {
         const experienciaActualizada = await Experiencia.findByIdAndUpdate(
             req.params.id,
             req.body,
-            {
-                new: true,
-                runValidators: true
-            }
+            { new: true, runValidators: true }
         );
 
         if (!experienciaActualizada) {
@@ -75,7 +68,6 @@ router.put("/:id", async (req, res) => {
         }
 
         res.json(experienciaActualizada);
-
     } catch (error) {
         res.status(400).json({
             mensaje: "Error al actualizar la experiencia",
@@ -84,7 +76,7 @@ router.put("/:id", async (req, res) => {
     }
 });
 
-// eliminar una experiencia
+// DELETE: Eliminar una experiencia
 router.delete("/:id", async (req, res) => {
     try {
         const experienciaEliminada = await Experiencia.findByIdAndDelete(
@@ -101,7 +93,6 @@ router.delete("/:id", async (req, res) => {
             mensaje: "Experiencia eliminada correctamente",
             experiencia: experienciaEliminada
         });
-
     } catch (error) {
         res.status(400).json({
             mensaje: "Error al eliminar la experiencia",
